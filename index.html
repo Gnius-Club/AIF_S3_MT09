@@ -38,10 +38,11 @@
                 <li><a href="#activity-2">2</a></li>
                 <li><a href="#activity-3">3</a></li>
                 <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
             </ul>
 
             <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
+                <p>💡 Esta misión introduce la detección de eventos y la diferencia con el monitoreo de datos continuos.</p>
                 <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
             </div>
         </aside>
@@ -70,20 +71,22 @@
                                 <td>
                                     <strong>Objetivos:</strong>
                                     <ul>
-                                        <li>Que los estudiantes integren sensores de presencia (PIR) y distancia (Ultrasónico).</li>
+                                        <li>Que los estudiantes integren sensores de presencia y distancia (PIR, Ultrasónico).</li>
                                         <li>Que comprendan la diferencia entre enviar datos continuos y reportar eventos discretos.</li>
-                                        <li>Que diseñen un proyecto libre que utilice la detección de eventos para una aplicación de seguridad o automatización.</li>
+                                        <li>Que diseñen un proyecto libre que utilice la detección de eventos para una aplicación de seguridad, automatización o interacción.</li>
                                     </ul>
                                     <strong>Secuencia de Clase:</strong>
                                     <ul>
-                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Exploración de sensores de presencia y el paradigma de datos de evento.</li>
-                                        <li><strong class="tactic-highlight">⚡BRAIN SPARK (DISEÑO LIBRE):</strong> Ideación, Vibe Coding, e implementación de un sistema basado en eventos.</li>
-                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de proyectos y reflexión sobre el diseño de sistemas interactivos y sus implicaciones.</li>
+                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Análisis profundo y contextualización de la misión con Xolo.</li>
+                                        <li><strong class="tactic-highlight">⚡VIBE CODING:</strong> Diseño de la intención y generación de código por IA.</li>
+                                        <li><strong class="tactic-highlight">⚡ANÁLISIS DE CÓDIGO:</strong> Lectura y comprensión guiada del código generado ("Taming the Genie").</li>
+                                        <li><strong class="tactic-highlight">⚡IMPLEMENTACIÓN Y DEBUGGING:</strong> Pruebas de hardware/software y depuración colaborativa con Xolo.</li>
+                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de proyectos, síntesis de "insights" y reflexión iterativa.</li>
                                     </ul>
                                     <strong>Entregable Clave:</strong>
                                     <ul>
-                                        <li>Un proyecto funcional que utiliza un sensor PIR o Ultrasónico para disparar una acción local, demostrando la programación basada en eventos.</li>
-                                        <li>Código que implementa una lógica de temporización o un filtrado de datos básico para un comportamiento más robusto.</li>
+                                        <li>Un script funcional y original en MicroPython, diseñado por los estudiantes, que lee datos de un sensor PIR o Ultrasónico y ejecuta una acción basada en la detección de un evento.</li>
+                                        <li>Comprensión demostrada del concepto de "dato de evento" vs. "dato continuo" y de patrones de programación basados en tiempo.</li>
                                     </ul>
                                 </td>
                                 <td>
@@ -93,19 +96,20 @@
                                         <li>Conexión a internet estable.</li>
                                         <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>) en modo Python.</li>
                                         <li>Chat "Agente Gnius" (Xolo) operativo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-7).</li>
-                                        <li>Por equipo de 2: 1 Micro:bit v2 con placa IOTbit, 1 sensor PIR, 1 sensor Ultrasónico, y cables de conexión.</li>
+                                        <li>Presentación de diapositivas (Diapositivas 1-10).</li>
+                                        <li>1 Micro:bit v2 con placa IOTbit y cable USB por equipo de 2.</li>
+                                        <li>1 Sensor PIR y/o 1 Sensor Ultrasónico por equipo.</li>
                                     </ul>
                                     <strong>Preparación Previa para ESTA Sesión:</strong>
                                     <ol>
                                         <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
                                             <ul>
-                                                <li>Asegurar que los sensores PIR y Ultrasónicos estén disponibles y funcionales.</li>
-                                                <li>Verificar la funcionalidad del chat de Xolo y tener cargada la presentación.</li>
+                                                <li>Asegurar que los sensores PIR y Ultrasónicos estén funcionales. El PIR es digital, el Ultrasónico requiere una librería o función específica.</li>
+                                                <li>Verificar la conexión a internet y el acceso a MakeCode.</li>
                                             </ul>
                                         </li>
-                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar el funcionamiento de los sensores PIR (digital) y Ultrasónico (analógico/pulsos). Estar preparado para discutir el concepto de "event-driven programming" y el filtrado de datos.</li>
-                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener una versión funcional de la "luz de bienvenida automática" para demostrar la lógica de temporizador y el concepto de estado (luz_encendida).</li>
+                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar la diferencia entre datos continuos y eventos discretos. Estar preparado para guiar la depuración de ambos sensores, incluyendo el concepto de filtrado para el ultrasónico.</li>
+                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un proyecto funcional, como la "Luz de Bienvenida Automática", para demostrar el uso de `time.time()` y una variable de estado para gestionar eventos.</li>
                                     </ol>
                                 </td>
                             </tr>
@@ -117,29 +121,29 @@
 
             <div class="activity-card" id="activity-1">
                 <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer el tono de la sesión, activar la IA y presentar la detección de movimiento y presencia.</p>
+                <p>Establecer el tono de la sesión, activar la IA y presentar los nuevos sensores de presencia.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto de la Misión</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta la nueva capacidad sensorial de los sistemas.</p>
+                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
+                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Buenos días, ingenieros. Nuestros sistemas ya pueden 'sentir' el ambiente estático. Hoy, les daremos la capacidad de percibir el movimiento y la presencia. Trabajaremos con sensores que nos dicen si 'algo' o 'alguien' está ahí. Esto es fundamental para la seguridad y la interacción humano-robot.</p>
+                                <p class="dialogue assistant">Buenos días, ingenieros. Nuestros sistemas pueden sentir el ambiente estático. Hoy, les daremos la capacidad de percibir el movimiento y la presencia. Trabajaremos con sensores que nos dicen si 'algo' o 'alguien' está ahí. Esto es fundamental para la seguridad y la interacción humano-robot.</p>
                             </div>
                         </div>
                     </div>
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 2: Activación y Personalización de Xolo</h3>
-                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual con Xolo.</p>
+                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Inicien su sesión con Xolo como es habitual, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo, soy Martín, perfil Piloto, y me interesa cómo los sistemas reaccionan a objetos en movimiento. Listo para la Misión 9.'</strong></p>
+                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy Roberto, perfil Piloto, y me interesa cómo los sistemas reaccionan a objetos en movimiento.'</strong> Esto preparará a su socio de IA para la sesión. Procedan.</p>
                             </div>
                         </div>
                     </div>
@@ -147,30 +151,18 @@
             </div>
 
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: A.I. GYM (Sensores de Eventos) ⏰ 10 minutos</h2>
-                <p>Construir el andamiaje conceptual sobre los sensores de presencia y la diferencia entre datos continuos y discretos.</p>
+                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
+                <p>Clarificar la meta de aprendizaje enfocada en la detección de eventos.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 1: Investigación sobre Sensores de Presencia</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador dirige a los alumnos para que investiguen los nuevos sensores.</p>
+                            <h3>Paso 1: "I Can Statement" de Eventos</h3>
+                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Su investigación con Xolo hoy se enfoca en dos nuevos tipos de sensores. De forma individual, usen este prompt: <strong>'Xolo, explica las tecnologías detrás del sensor PIR y el Ultrasónico, y para qué se usan profesionalmente.'</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Datos Continuos vs. Datos de Evento</h3>
-                            <p>(Proyectar Diapositiva 4) El facilitador guía la siguiente consulta, enfocada en los tipos de datos.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, un concepto clave en IoT y IA. Pregúntenle a Xolo: <strong>'¿Cuál es la diferencia crucial entre un 'flujo de datos continuos', como la temperatura, y un 'evento discreto', como la detección de movimiento?'</strong> Entender esto es fundamental para diseñar sistemas eficientes.</p>
+                                <p class="dialogue assistant">La meta de hoy es trabajar con un nuevo paradigma de datos. Al finalizar esta sesión, podrán afirmar: <strong>'Yo puedo integrar un sensor de presencia, explicar la diferencia entre datos continuos y de evento, y diseñar un sistema que reaccione a dichos eventos.'</strong></p>
                             </div>
                         </div>
                     </div>
@@ -178,42 +170,30 @@
             </div>
 
             <div class="activity-card" id="activity-3">
-                 <h2>⚡ Actividad 3: Brain Spark (Diseño de Sistemas de Eventos) ⏰ 22 minutos</h2>
-                <p>Los estudiantes diseñan, implementan y depuran un proyecto creativo basado en la detección de eventos.</p>
+                <h2>⚡ Actividad 3: A.I. GYM (Sensores de Eventos) ⏰ 10 minutos</h2>
+                <p>Facilitar una sesión de aprendizaje sobre los nuevos sensores y la distinción entre tipos de datos.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 1: Presentación del Desafío y Formación de Parejas</h3>
-                             <p>(Proyectar Diapositiva 5) El facilitador presenta el desafío de diseño libre.</p>
+                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
+                            <p>(Proyectar Diapositiva 4 y 5) El facilitador dirige a los alumnos para que aprendan sobre los sensores y los tipos de datos con Xolo.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, su misión creativa. Formen sus parejas. Su desafío es diseñar un sistema **libre** que reaccione a un evento de presencia o proximidad. Pueden crear una alarma de seguridad, una puerta automática, un sistema de iluminación inteligente, o un contador de personas. El concepto es suyo.</p>
+                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Su aprendizaje con Xolo hoy es doble. Primero, pregunten: <strong>'Xolo, explica las tecnologías detrás del sensor PIR y el Ultrasónico.'</strong> Una vez que entiendan el hardware, pasen al concepto clave de datos: <strong>'Ahora, explícame la diferencia crucial entre un "flujo de datos continuos" y un "evento discreto".'</strong></p>
                             </div>
                         </div>
                     </div>
-                    <div class="step-card">
+                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 2: Ideación, Vibe Coding y Generación</h3>
-                            <p>(Proyectar Diapositiva 6) Las parejas definen su 'vibe' y colaboran con Xolo para obtener el código.</p>
+                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
+                            <p>El facilitador circula, refuerza conceptos y sugiere preguntas de profundización.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                 <p class="dialogue assistant">Discutan y definan su lógica. Luego, descríbanla a Xolo. Por ejemplo: <strong>'Xolo, vibe de luz de bienvenida: cuando el PIR detecta movimiento, encender un LED. Si deja de detectar movimiento por 10 segundos, apagar el LED.'</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Implementación y Depuración Avanzada</h3>
-                             <p>(Proyectar Diapositiva 7) Las parejas implementan el código y enfrentan desafíos de calibración y robustez.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Implementen sus proyectos. El sensor PIR a veces necesita un tiempo de 'calentamiento'. Si usan el sensor ultrasónico y obtienen lecturas erráticas, describan el problema a Xolo y pregúntenle sobre técnicas para 'filtrar datos' y hacer su sistema más estable. Este es un desafío de ingeniería real."</p>
+                                <p class="dialogue assistant">(Mientras circula) "La diferencia entre datos continuos y de evento es fundamental para diseñar sistemas eficientes. Para profundizar, pregúntenle a Xolo: <strong>'¿Por qué sería una mala idea enviar datos de un sensor PIR a la nube cada segundo?'</strong> O también: <strong>'Dame un ejemplo de un sistema que necesite AMBOS tipos de datos, continuos y de evento, para funcionar.'</strong>"</p>
                             </div>
                         </div>
                     </div>
@@ -221,42 +201,85 @@
             </div>
 
             <div class="activity-card" id="activity-4">
-                <h2>⚡ Actividad 4: Gnius STORM (Reflexión sobre Diseño y Ética) ⏰ 5 minutos</h2>
-                <p>El facilitador modera una reflexión final enfocada en el diseño de sistemas interactivos y sus implicaciones.</p>
+                 <h2>⚡ Actividad 4: Brain Spark (Sistemas de Eventos) ⏰ 22 minutos</h2>
+                <p>Los estudiantes diseñan, implementan y depuran un proyecto original basado en la detección de eventos.</p>
                 <div class="steps">
                     <div class="step-card">
                         <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
-                            <p>Los alumnos reflexionan individualmente sobre la elección del sensor.</p>
+                            <h3>Paso 1: Presentación del Desafío y Formación de Parejas</h3>
+                             <p>(Proyectar Diapositiva 6) El facilitador presenta el desafío de diseño libre y da la instrucción de formar parejas.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Vamos al cierre. Primero, un minuto de reflexión individual. Piensen: para el problema que intentaron resolver, ¿qué tipo de dato fue más útil, el 'sí/no' del PIR o la distancia numérica del ultrasónico? ¿Por qué?</p>
+                                <p class="dialogue assistant">Ahora, a la parte creativa. Formen sus parejas. Su misión es diseñar un sistema **libre** que reaccione a un evento de presencia o proximidad. Pueden crear una alarma, una puerta automática, un sistema de iluminación inteligente o un contador de personas. El problema y la solución son suyos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 2: Diseño de la "Vibe" y Generación de Código</h3>
+                            <p>(Proyectar Diapositiva 7) Las parejas diseñan su concepto, lo comunican a Xolo y reciben el código base.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Discutan su idea, definan una 'vibe' clara y luego descríbansela a Xolo. Por ejemplo: <strong>'Xolo, queremos una luz de bienvenida. Cuando el PIR detecta a alguien, se enciende un LED. Cuando deja de detectar movimiento por 10 segundos, el LED se apaga.'</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 3: Implementación y Depuración de Lógica y Sensores</h3>
+                             <p>(Proyectar Diapositiva 8 y 9) Las parejas implementan su sistema, enfrentando desafíos de calibración y lógica temporal.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                 <p class="dialogue assistant">Implementen sus proyectos. El PIR a veces necesita un momento para calibrarse al inicio. El sensor ultrasónico puede dar lecturas erráticas. Si esto ocurre, describan el problema a Xolo. Por ejemplo: <strong>'Xolo, nuestro sensor ultrasónico da valores que saltan mucho.'</strong> Él les explicará conceptos como el 'filtrado de datos' para hacer su sistema más estable y robusto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="activity-5">
+                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
+                <p>El facilitador modera una reflexión final enfocada en la selección de sensores y las implicaciones de su uso.</p>
+                <div class="steps">
+                    <div class="step-card">
+                        <div class="step-content">
+                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
+                            <p>(Proyectar Diapositiva 10) Instrucción para la reflexión individual.</p>
+                        </div>
+                        <div class="collapsible">
+                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
+                            <div class="collapsible-content">
+                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: Para su proyecto, ¿qué tipo de dato fue más útil, el 'sí/no' del PIR o la distancia numérica del ultrasónico? ¿Por qué?</p>
                             </div>
                         </div>
                     </div>
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
-                            <p>Los alumnos discuten en parejas las implicaciones de privacidad de su tecnología.</p>
+                            <p>Los alumnos discuten las implicaciones de privacidad de sus sistemas.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, en parejas, una discusión importante. Discutan las implicaciones de privacidad de tener sensores de presencia en espacios públicos. ¿Dónde está el límite entre seguridad y vigilancia? Tienen dos minutos.</p>
+                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos las implicaciones de privacidad de tener sensores de presencia en espacios públicos. ¿Qué consideraciones éticas deberíamos tener?</p>
                             </div>
                         </div>
                     </div>
                     <div class="step-card">
                         <div class="step-content">
                             <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
-                            <p>Algunas parejas comparten su proyecto y el facilitador cierra la sesión.</p>
+                            <p>Algunas parejas comparten sus proyectos y el facilitador cierra la sesión.</p>
                         </div>
                         <div class="collapsible">
                             <button type="button" class="collapsible-button">Diálogo Sugerido</button>
                             <div class="collapsible-content">
-                                <p class="dialogue assistant">Escuchemos de algunas parejas. Compartan el sistema que diseñaron y qué desafío de depuración o calibración superaron. (Escuchar 2-3 respuestas). Excelente. Hoy han aprendido a trabajar con sistemas basados en eventos, un paradigma fundamental en la programación. Han dotado a sus sistemas de la capacidad de reaccionar a un mundo dinámico. Esta es la base de la seguridad inteligente y la robótica interactiva. Gran trabajo.</p>
+                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan brevemente el sistema que diseñaron y un 'insight' clave que obtuvieron durante el proceso. (Escuchar respuestas). Han aprendido a trabajar con sistemas basados en eventos, un paradigma fundamental en la programación moderna. Han dotado a sus sistemas de la capacidad de reaccionar a un mundo dinámico, la base de la seguridad inteligente y la robótica interactiva. Excelente trabajo.</p>
                             </div>
                         </div>
                     </div>
