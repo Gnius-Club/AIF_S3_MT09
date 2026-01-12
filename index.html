@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook-S3-M09</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S3-TM9</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 9: Detección de Presencia y Eventos</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 9 - 3o de Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,254 +38,410 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Esta misión introduce la detección de eventos y la diferencia con el monitoreo de datos continuos.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
-            <!-- SECCIÓN "DE UN VISTAZO" -->
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Sesión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Secuencia y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Que los estudiantes integren sensores de presencia y distancia (PIR, Ultrasónico).</li>
-                                        <li>Que comprendan la diferencia entre enviar datos continuos y reportar eventos discretos.</li>
-                                        <li>Que diseñen un proyecto libre que utilice la detección de eventos para una aplicación de seguridad, automatización o interacción.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡A.I. GYM:</strong> Análisis profundo y contextualización de la misión con Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡VIBE CODING:</strong> Diseño de la intención y generación de código por IA.</li>
-                                        <li><strong class="tactic-highlight">⚡ANÁLISIS DE CÓDIGO:</strong> Lectura y comprensión guiada del código generado ("Taming the Genie").</li>
-                                        <li><strong class="tactic-highlight">⚡IMPLEMENTACIÓN Y DEBUGGING:</strong> Pruebas de hardware/software y depuración colaborativa con Xolo.</li>
-                                        <li><strong class="tactic-highlight">⚡GNIUS STORM:</strong> Showcase de proyectos, síntesis de "insights" y reflexión iterativa.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un script funcional y original en MicroPython, diseñado por los estudiantes, que lee datos de un sensor PIR o Ultrasónico y ejecuta una acción basada en la detección de un evento.</li>
-                                        <li>Comprensión demostrada del concepto de "dato de evento" vs. "dato continuo" y de patrones de programación basados en tiempo.</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso a MakeCode (<a href="https://makecode.microbit.org/" target="_blank">https://makecode.microbit.org/</a>) en modo Python.</li>
-                                        <li>Chat "Agente Gnius" (Xolo) operativo.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-10).</li>
-                                        <li>1 Micro:bit v2 con placa IOTbit y cable USB por equipo de 2.</li>
-                                        <li>1 Sensor PIR y/o 1 Sensor Ultrasónico por equipo.</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Verificación del Entorno Digital y Físico (Interna):</strong>
-                                            <ul>
-                                                <li>Asegurar que los sensores PIR y Ultrasónicos estén funcionales. El PIR es digital, el Ultrasónico requiere una librería o función específica.</li>
-                                                <li>Verificar la conexión a internet y el acceso a MakeCode.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización Conceptual y Técnica:</strong> Repasar la diferencia entre datos continuos y eventos discretos. Estar preparado para guiar la depuración de ambos sensores, incluyendo el concepto de filtrado para el ultrasónico.</li>
-                                        <li><strong>Preparación de la Demostración Práctica:</strong> Tener un proyecto funcional, como la "Luz de Bienvenida Automática", para demostrar el uso de `time.time()` y una variable de estado para gestionar eventos.</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> Usar el Micro:Bit y el Smart Science IOT Kit para programar sensores PIR y ultrasónicos mediante envíos por eventos y lecturas continuas, y comprender la eficiencia y el diseño de sistemas de datos.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explicame cómo funcionan los sensores PIR y Ultrasónico, y qué tipo de dato genera cada uno. Luego, ayúdame a crear con Vibe Coding un script en Python que lea ambos sensores: el PIR debe detectar presencia y enviar un evento solo cuando cambie de estado, mientras que el Ultrasónico debe enviar lecturas continuas de distancia. Finalmente, explícame cómo una IA podría combinar estos datos para decidir cuándo encender una alarma o activar una luz inteligente. ¿Por qué es importante elegir qué tipo de datos enviar a la nube y cuándo hacerlo?</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Eficiencia de Datos: Es decidir qué información es realmente importante enviar a internet para no saturar la red, como avisar solo cuando hay un cambio en lugar de enviar el mismo dato repetidamente.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar sensores de movimiento y distancia para enviar datos a la nube de forma inteligente.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes intervalos de tiempo y disparadores de eventos para entender limitaciones de red.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Micro:Bit (1 por cada 2 estudiantes)</label>
+<label><input type="checkbox"> Smart Science IOT Kit + Sensores extra (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a MakeCode (https://makecode.microbit.org/) con extensión Smart Science IOT instalada</label>
+<label><input type="checkbox"> Acceso a Smart IOT (https://smartiot.space/)</label>
+                        <label><input type="checkbox"> Cables de conexión para sensores</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa programación con BLOQUES en MakeCode</label>
+                        <label><input type="checkbox"> 📋 Para agregar extensión: En MakeCode → Extensiones → Buscar 'Smart Science IOT' → Agregar</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Manipular con delicadeza, no mojar, verificar conexiones y desconectar al terminar.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre sensores IOT y eficiencia de datos (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si el micro:bit no responde:</strong> Verificar batería o conexión USB. Intentar descargar el programa nuevamente.</li>
+<li><strong>Si los sensores no detectan correctamente:</strong> Verificar las conexiones en el kit IOT y la alimentación. Probar con diferentes distancias.</li>
+<li><strong>Si los datos no aparecen en Smart IOT:</strong> Revisar la conexión a internet y que el ID del dispositivo sea correcto.</li>
+<li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <!-- FIN DE LA SECCIÓN "DE UN VISTAZO" -->
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de IA y Contexto ⏰ 3 minutos</h2>
-                <p>Establecer el tono de la sesión, activar la IA y presentar los nuevos sensores de presencia.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto Estratégico</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta el enfoque de la misión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Buenos días, ingenieros. Nuestros sistemas pueden sentir el ambiente estático. Hoy, les daremos la capacidad de percibir el movimiento y la presencia. Trabajaremos con sensores que nos dicen si 'algo' o 'alguien' está ahí. Esto es fundamental para la seguridad y la interacción humano-robot.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación y Personalización de Xolo</h3>
-                            <p>El facilitador guía a los alumnos para que inicien su sesión de trabajo individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Inicien su sesión con Xolo como de costumbre, compartiendo su perfil de aprendizaje e interés. Por ejemplo: <strong>'Hola Xolo. Soy Roberto, perfil Piloto, y me interesa cómo los sistemas reaccionan a objetos en movimiento.'</strong> Esto preparará a su socio de IA para la sesión. Procedan.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos sentidos inteligentes a sus Micro:Bits y Kits Smart Science".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre sensores IOT y eficiencia de datos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A conectar sensores PIR y ultrasónicos para que envíen datos eficientes a la nube.</p>
+                        <p><strong>Aplicación real:</strong> Los sistemas de ciudades inteligentes en edificios modernos usan esta tecnología para ahorrar energía activando luces solo cuando detectan personas y monitoreando espacios.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 2 minutos</h2>
-                <p>Clarificar la meta de aprendizaje enfocada en la detección de eventos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: "I Can Statement" de Eventos</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador presenta el objetivo de aprendizaje de la sesión.</p>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo funcionan los sensores PIR y ultrasónicos y qué datos generan.</li>
+                            <li>Introduce el concepto de eficiencia en el envío de datos a la nube.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar sensores PIR y ultrasónicos para detectar presencia y distancia.</li>
+                            <li>Aprender sobre la diferencia entre enviar datos continuos o por eventos.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">La meta de hoy es trabajar con un nuevo paradigma de datos. Al finalizar esta sesión, podrán afirmar: <strong>'Yo puedo integrar un sensor de presencia, explicar la diferencia entre datos continuos y de evento, y diseñar un sistema que reaccione a dichos eventos.'</strong></p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar sensores IOT para capturar datos y entender la eficiencia de red.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Ahora vamos a sumergirnos en el mundo del IOT. Abran su chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Vamos a descubrir cómo los sensores PIR y ultrasónicos capturan información diferente y cómo podemos ser inteligentes al enviar esos datos a la nube. Si algo no queda claro sobre los tipos de datos o cómo se conectan los sensores, ¡pregúntenle a XOLO sin miedo! Él está aquí para guiarlos.</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: A.I. GYM (Sensores de Eventos) ⏰ 10 minutos</h2>
-                <p>Facilitar una sesión de aprendizaje sobre los nuevos sensores y la distinción entre tipos de datos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Instrucción para el Aprendizaje Conceptual</h3>
-                            <p>(Proyectar Diapositiva 4 y 5) El facilitador dirige a los alumnos para que aprendan sobre los sensores y los tipos de datos con Xolo.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Iniciamos el A.I. GYM. Su aprendizaje con Xolo hoy es doble. Primero, pregunten: <strong>'Xolo, explica las tecnologías detrás del sensor PIR y el Ultrasónico.'</strong> Una vez que entiendan el hardware, pasen al concepto clave de datos: <strong>'Ahora, explícame la diferencia crucial entre un "flujo de datos continuos" y un "evento discreto".'</strong></p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
                     </div>
-                     <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Supervisión y Guía del Facilitador</h3>
-                            <p>El facilitador circula, refuerza conceptos y sugiere preguntas de profundización.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Micro:Bits y Kits Smart Science conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique envíos de datos eficientes.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar sensores IOT.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Conectar los sensores al kit IOT y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a diseñar un envío que diferencie eventos de lecturas continuas y a validar cuándo conviene cada enfoque."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">(Mientras circula) "La diferencia entre datos continuos y de evento es fundamental para diseñar sistemas eficientes. Para profundizar, pregúntenle a Xolo: <strong>'¿Por qué sería una mala idea enviar datos de un sensor PIR a la nube cada segundo?'</strong> O también: <strong>'Dame un ejemplo de un sistema que necesite AMBOS tipos de datos, continuos y de evento, para funcionar.'</strong>"</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El sensor PIR detecta movimiento cada vez que pasas la mano?</li>
+                            <li>¿Qué pasa si el sensor ultrasónico está demasiado cerca de un objeto?</li>
+                            <li>¿Los datos llegan a la plataforma Smart IOT con la misma frecuencia que los envías?</li>
+                            <li>¿Por qué enviar datos solo cuando hay un cambio (evento) ayuda a la eficiencia del sistema?</li>
+                            <li>Si tuvieras 1000 sensores, ¿cómo afectaría el diseño del envío de datos a la estabilidad de la red?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a pasar de la teoría a la acción. Usen el prompt en pantalla para que XOLO los ayude a idear un sistema que use eventos y lecturas continuas. Imaginen, por ejemplo, una alarma que solo se activa si el PIR detecta a alguien Y el ultrasónico confirma que está a menos de un metro. Una vez que tengan su GCS, llévenlo a MakeCode, prueben en el simulador y luego conecten sus sensores reales. No olviden las preguntas de experimentación para ver qué tan eficiente es su diseño. Si tienen errores o dudas, pregúntenle a XOLO, él los ayudará a depurar.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el envío básico de datos. ¿Puedes enseñarme cómo hacer que mi micro:bit guarde un promedio de las últimas 5 lecturas antes de enviarlas a la nube?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark (Sistemas de Eventos) ⏰ 22 minutos</h2>
-                <p>Los estudiantes diseñan, implementan y depuran un proyecto original basado en la detección de eventos.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Presentación del Desafío y Formación de Parejas</h3>
-                             <p>(Proyectar Diapositiva 6) El facilitador presenta el desafío de diseño libre y da la instrucción de formar parejas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, a la parte creativa. Formen sus parejas. Su misión es diseñar un sistema **libre** que reaccione a un evento de presencia o proximidad. Pueden crear una alarma, una puerta automática, un sistema de iluminación inteligente o un contador de personas. El problema y la solución son suyos.</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Diseño de la "Vibe" y Generación de Código</h3>
-                            <p>(Proyectar Diapositiva 7) Las parejas diseñan su concepto, lo comunican a Xolo y reciben el código base.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Discutan su idea, definan una 'vibe' clara y luego descríbansela a Xolo. Por ejemplo: <strong>'Xolo, queremos una luz de bienvenida. Cuando el PIR detecta a alguien, se enciende un LED. Cuando deja de detectar movimiento por 10 segundos, el LED se apaga.'</strong></p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Implementación y Depuración de Lógica y Sensores</h3>
-                             <p>(Proyectar Diapositiva 8 y 9) Las parejas implementan su sistema, enfrentando desafíos de calibración y lógica temporal.</p>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué sensores y tipos de envío funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué tipo de sensor envió datos de forma más estable? ¿Qué te sorprendió de la velocidad de la red?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">Implementen sus proyectos. El PIR a veces necesita un momento para calibrarse al inicio. El sensor ultrasónico puede dar lecturas erráticas. Si esto ocurre, describan el problema a Xolo. Por ejemplo: <strong>'Xolo, nuestro sensor ultrasónico da valores que saltan mucho.'</strong> Él les explicará conceptos como el 'filtrado de datos' para hacer su sistema más estable y robusto.</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi micro:bit envió datos por eventos usando el sensor PIR. Me sorprendió que la plataforma Smart IOT reaccionara tan rápido."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM (Reflexión) ⏰ 5 minutos</h2>
-                <p>El facilitador modera una reflexión final enfocada en la selección de sensores y las implicaciones de su uso.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Gnius STORM (Think - Individual)</h3>
-                            <p>(Proyectar Diapositiva 10) Instrucción para la reflexión individual.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Bien, para cerrar, nuestro Think-Pair-Share. Individualmente, un minuto para pensar: Para su proyecto, ¿qué tipo de dato fue más útil, el 'sí/no' del PIR o la distancia numérica del ultrasónico? ¿Por qué?</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Gnius STORM (Pair - Parejas)</h3>
-                            <p>Los alumnos discuten las implicaciones de privacidad de sus sistemas.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Ahora, en parejas, discutan durante dos minutos las implicaciones de privacidad de tener sensores de presencia en espacios públicos. ¿Qué consideraciones éticas deberíamos tener?</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Gnius STORM (Share & Synthesis)</h3>
-                            <p>Algunas parejas comparten sus proyectos y el facilitador cierra la sesión.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">Escuchemos a algunas parejas. Compartan brevemente el sistema que diseñaron y un 'insight' clave que obtuvieron durante el proceso. (Escuchar respuestas). Han aprendido a trabajar con sistemas basados en eventos, un paradigma fundamental en la programación moderna. Han dotado a sus sistemas de la capacidad de reaccionar a un mundo dinámico, la base de la seguridad inteligente y la robótica interactiva. Excelente trabajo.</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
-</html>
+</html></html>
